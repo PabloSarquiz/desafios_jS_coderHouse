@@ -80,4 +80,23 @@ body {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 780px) {
+  .container {
+    width: 100%;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  .container p {
+    width: 86%;
+  }
+  .container .container__links {
+    width: 100%;
+  }
+  .container .container__links .github {
+    width: 54%;
+  }
+}
+
+
 
