@@ -93,5 +93,8 @@
   .container .container__links .github {
     width: 54%;
   }
+  .container .container__links .volver {
+    width: 54%;
+  }
 }
 
