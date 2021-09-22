@@ -91,7 +91,8 @@
     width: 100%;
   }
   .container .container__links .github {
-    width: 54%;
+    display: none;
+
   }
   .container .container__links .volver {
     width: 54%;
