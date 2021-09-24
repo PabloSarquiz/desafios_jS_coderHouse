@@ -1,4 +1,4 @@
-multiplicando = parseInt(prompt("Imprimir la tabla del:"));
+multiplicando = parseInt(prompt("Que numero te gustaria multiplicar?:"));
 
 for (i = 1; i <= 10; i++) {
 
