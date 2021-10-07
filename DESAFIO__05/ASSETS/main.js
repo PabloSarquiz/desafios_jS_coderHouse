@@ -1,13 +1,7 @@
 let coleccion = [];
 
 alert("Bienvenido! hoy vamos a crear un registro Virtual de todos sus Libros");
-alert("A continuacion, ingrese la informacion solicitada, para salir ingrese EXIT");
-
-
-
-
-
-
+alert("A continuacion, ingrese la informacion solicitada");
 
 
 class libro {
@@ -56,6 +50,7 @@ function deseaContinuar(){
 
 
 crearLibro();
+
 
 
 
