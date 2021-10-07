@@ -7,12 +7,12 @@
     font-family:  'Roboto Mono', monospace;
     text-decoration: none;
   }
-
+  
   body {
     overflow: hidden; /* Hide scrollbars */
     min-height: 100vh;
   }
-
+  
   .stripes {
     border:  1px, solid, black;
     height: 50px;
@@ -23,16 +23,16 @@
   #000107 10px,
   #010208 20px
   
-);
+  );
   }
-
-
+  
+  
   .zoom {
     transition: transform .5s;
     transform: scale(1.1);
   }
-
-
+  
+  
   .container {
     background: yellow;
     background: linear-gradient(
@@ -48,29 +48,60 @@
   .container h1 {
     font-size: 3rem;
   }
-  .container .github {
+  
+  .container p {
+    width: 20%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  
+  .container .container__links .github {
+    font-weight: 700;
+    font-size: 1rem;
+    border: 2px solid black;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .container .container__links .github:hover {
+    text-decoration: underline;
+  }
+   .container__links .volver {
+    font-size: 1rem;
     font-weight: 700;
     border: 2px solid black;
     padding: 0.6rem;
+    margin-bottom: 1rem;
+    
   }
-  .container .github:hover {
+  
+  .container__links .volver:hover {
     text-decoration: underline;
   }
-  .container .container__desafios nav ul {
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  
+  @media screen and (max-width: 780px) {
+    .container {
+      width: 100%;
+    }
+    .container h1 {
+      font-size: 2rem;
+    }
+    .container p {
+      width: 86%;
+    }
+    .container .container__links {
+      width: 100%;
+    }
+    .container .container__links .github {
+      width: 54%;
+      display: none;
+    }
+    .container .container__links .volver {
+      width: 54%;
+    }
   }
-  .container .container__desafios nav ul li {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
-  }
-  .container .container__desafios nav ul li a:hover {
-    text-decoration: underline;
-  }
+  
+  
+  
+  
