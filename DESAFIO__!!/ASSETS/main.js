@@ -23,10 +23,10 @@ function jugar(nombre) {
         alert("Nos vemos la proxima!")
     }
 
-
 }
 
 // seleccion de la maquina
+
 let eleccionMaquina = () => Math.floor(Math.random() * 3)
 
 //validacion del juego
@@ -54,7 +54,6 @@ function validar(a, b) {
         }
     }
 }
-
 
 jugar(usuario);
 
