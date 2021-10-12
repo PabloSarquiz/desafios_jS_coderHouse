@@ -2,6 +2,7 @@
 
 let coleccion = [];
 
+
 alert("Bienvenido! hoy vamos a crear un registro Virtual de todos sus Libros");
 alert("A continuacion, ingrese la informacion solicitada");
 
@@ -18,7 +19,7 @@ class libro {
         this.nota = nota;
     }
     
-    getAño(){
+    Año(){
         return this.año
     }
 
@@ -27,7 +28,7 @@ class libro {
     }
 
     datoDeColor(){
-        alert(`${this.getTitulo()}, fue publicado en el año ${this.getAño}`)
+        return alert(`${this.getTitulo()}, fue publicado en el año ${this.getAño}`)
     }
 
 
@@ -59,7 +60,6 @@ function deseaContinuar(){
     if(continuar == "SI"){
         return crearLibro()
     }else {
-        
         alert("Muchas gracias por utilizar nuestro servicio, aprete F12 para ver sus resultados");
     }
 
@@ -67,8 +67,21 @@ function deseaContinuar(){
 
 
 crearLibro();
+const porAño = [...coleccion].sort((a, b) => a.año - b.año);
+const porNotaMayorMenor = [...coleccion].sort((a, b) => b.nota - a.nota );
 
 console.table(coleccion);
+console.table(porAño);
+console.table(porNotaMayorMenor);
+
+
+
+
+
+
+
+
+
 
 
 
