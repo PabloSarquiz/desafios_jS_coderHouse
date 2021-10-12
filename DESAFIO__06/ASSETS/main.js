@@ -18,19 +18,14 @@ class libro {
         this.paginas = paginas;
         this.nota = nota;
     }
-    
-    Año(){
+
+    getAño() {
         return this.año
     }
 
-    getTitulo(){
+    getTitulo() {
         return this.titulo
     }
-
-    datoDeColor(){
-        return alert(`${this.getTitulo()}, fue publicado en el año ${this.getAño}`)
-    }
-
 
 }
 
@@ -50,16 +45,16 @@ function crearLibro() {
 
     return deseaContinuar()
 
-    
+
 }
 
 
-function deseaContinuar(){
+function deseaContinuar() {
     let continuar = prompt("Desea ingresar otro Libro? SI | NO ").toUpperCase()
 
-    if(continuar == "SI"){
+    if (continuar == "SI") {
         return crearLibro()
-    }else {
+    } else {
         alert("Muchas gracias por utilizar nuestro servicio, aprete F12 para ver sus resultados");
     }
 
@@ -68,10 +63,13 @@ function deseaContinuar(){
 
 crearLibro();
 const porAño = [...coleccion].sort((a, b) => a.año - b.año);
-const porNotaMayorMenor = [...coleccion].sort((a, b) => b.nota - a.nota );
+const porNotaMayorMenor = [...coleccion].sort((a, b) => b.nota - a.nota);
 
+console.log("Usted ingreso los libros en este orden")
 console.table(coleccion);
+console.log("Aqui estan ordenados por año de publicacion");
 console.table(porAño);
+console.log("Aqui estan ordenados por nota");
 console.table(porNotaMayorMenor);
 
 
