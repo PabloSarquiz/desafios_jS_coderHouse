@@ -27,6 +27,8 @@ class libro {
         return this.titulo
     }
 
+    
+
 }
 
 
@@ -72,6 +74,7 @@ console.table(porAño);
 console.log("Aqui estan ordenados por nota");
 console.table(porNotaMayorMenor);
 
+console.table(coleccion[0].assignDatos());
 
 
 
