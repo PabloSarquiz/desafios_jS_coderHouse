@@ -7,7 +7,7 @@ alert("Bienvenido! hoy vamos a crear un registro Virtual de todos sus Libros");
 alert("A continuacion, ingrese la informacion solicitada");
 
 
-class libro {
+class Libro {
     constructor(autor, titulo, idioma, año, editorial, formato, paginas, nota) {
         this.autor = autor;
         this.titulo = titulo;
@@ -27,13 +27,13 @@ class libro {
         return this.titulo
     }
 
-    
+
 
 }
 
 
 function crearLibro() {
-    coleccion.push(new libro(
+    coleccion.push(new Libro(
         prompt("Ingrese el nombre del autor").toUpperCase(),
         prompt("Ingrese el titulo del libro").toUpperCase(),
         prompt("Ingrese el idioma del libro").toUpperCase(),
@@ -45,7 +45,9 @@ function crearLibro() {
 
     ))
 
-    return deseaContinuar()
+    localStorage.setItem("Libro", JSON.stringify(Libro));
+
+    return deseaContinuar(coleccion)
 
 
 }
@@ -74,7 +76,7 @@ console.table(porAño);
 console.log("Aqui estan ordenados por nota");
 console.table(porNotaMayorMenor);
 
-console.table(coleccion[0].assignDatos());
+
 
 
 
