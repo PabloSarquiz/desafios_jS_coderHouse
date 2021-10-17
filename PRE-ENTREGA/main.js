@@ -24,7 +24,7 @@ let biblioteca = [];
 biblioteca.push(libroUno, libroDos, libroTres, libroCuatro, libroCinco, libroSeis, libroSiete);
 
 let carrito = [];
-
+let total = 0;
 
 
 function main() {
@@ -34,89 +34,90 @@ function main() {
     while (opcion != 0) {
         switch (opcion) {
             case 1:
-                if (biblioteca[0].stock <= 0) {
+                if (biblioteca[opcion-1].stock <= 0) {
                     alert("Lo sentimos, ya no hay stock")
-                    mostrarProductos();
+                    opcion = mostrarProductos();
                 } else {
-                    alert(`agregaste ${biblioteca[0].titulo} al carrito`);
-                    biblioteca[0].stock--
-                    agregarLibro(biblioteca[0]);
+                    alert(`agregaste ${biblioteca[opcion-1].titulo} al carrito`);
+                    biblioteca[opcion-1].stock--
+                    agregarLibro(biblioteca[opcion-1]);
 
                 }
                 break
 
             case 2:
-                if (biblioteca[1].stock <= 0) {
+                if (biblioteca[opcion-1].stock <= 0) {
                     alert("Lo sentimos, ya no hay stock")
                     mostrarProductos();
                 } else {
-                    alert(`agregaste ${biblioteca[1].titulo} al carrito`);
-                    biblioteca[1].stock--
-                    agregarLibro(biblioteca[1]);
+                    alert(`agregaste ${biblioteca[opcion-1].titulo} al carrito`);
+                    biblioteca[opcion-1].stock--
+                    agregarLibro(biblioteca[opcion-1]);
 
                 }
                 break
 
             case 3:
-                if (biblioteca[2].stock <= 0) {
+                if (biblioteca[opcion-1].stock <= 0) {
                     alert("Lo sentimos, ya no hay stock")
                     mostrarProductos();
                 } else {
-                    alert(`agregaste ${biblioteca[2].titulo} al carrito`);
-                    biblioteca[2].stock--
-                    agregarLibro(biblioteca[2]);
+                    alert(`agregaste ${biblioteca[opcion-1].titulo} al carrito`);
+                    biblioteca[opcion-1].stock--
+                    agregarLibro(biblioteca[opcion-1]);
 
                 }
                 break
             case 4:
-                if (biblioteca[3].stock <= 0) {
+                if (biblioteca[opcion-1].stock <= 0) {
                     alert("Lo sentimos, ya no hay stock")
                     mostrarProductos();
                 } else {
-                    alert(`agregaste ${biblioteca[3].titulo} al carrito`);
-                    biblioteca[3].stock--
-                    agregarLibro(biblioteca[3]);
+                    alert(`agregaste ${biblioteca[opcion-1].titulo} al carrito`);
+                    biblioteca[opcion-1].stock--
+                    agregarLibro(biblioteca[opcion-1]);
 
                 }
                 break
 
             case 5:
-                if (biblioteca[4].stock <= 0) {
+                if (biblioteca[opcion-1].stock <= 0) {
                     alert("Lo sentimos, ya no hay stock")
                     mostrarProductos();
                 } else {
-                    alert(`agregaste ${biblioteca[4].titulo} al carrito`);
-                    biblioteca[4].stock--
-                    agregarLibro(biblioteca[4]);
+                    alert(`agregaste ${biblioteca[opcion-1].titulo} al carrito`);
+                    biblioteca[opcion-1].stock--
+                    agregarLibro(biblioteca[opcion-1]);
 
                 }
                 break
 
             case 6:
-                if (biblioteca[5].stock <= 0) {
+                if (biblioteca[opcion-1].stock <= 0) {
                     alert("Lo sentimos, ya no hay stock")
                     mostrarProductos();
                 } else {
-                    alert(`agregaste ${biblioteca[5].titulo} al carrito`);
-                    biblioteca[5].stock--
-                    agregarLibro(biblioteca[5]);
+                    alert(`agregaste ${biblioteca[opcion-1].titulo} al carrito`);
+                    biblioteca[opcion-1].stock--
+                    agregarLibro(biblioteca[opcion-1]);
 
                 }
                 break
             case 7:
-                if (biblioteca[6].stock <= 0) {
+                if (biblioteca[opcion-1].stock <= 0) {
                     alert("Lo sentimos, ya no hay stock")
                     mostrarProductos();
                 } else {
-                    alert(`agregaste ${biblioteca[6].titulo} al carrito`);
-                    biblioteca[6].stock--
-                    agregarLibro(biblioteca[6]);
+                    alert(`agregaste ${biblioteca[opcion-1].titulo} al carrito`);
+                    biblioteca[opcion-1].stock--
+                    agregarLibro(biblioteca[opcion-1]);
 
                 }
                 break
 
             default:
                 alert("Ingresaste una opcion invalida");
+                
         };
 
         opcion = mostrarProductos();
@@ -125,6 +126,8 @@ function main() {
     alert("Muchas gracias por su interes en nuestros libros, a continuacion aprete f12 para ver sus productos seleccionados")
     console.log("Estos son los productos en su carrito!")
     console.log(carrito);
+    totalCarrito()
+    console.log(`La suma total de su carrito es ${parseInt(total)}`)
 };
 
 function agregarLibro(libro) {
@@ -136,7 +139,16 @@ function mostrarProductos() {
     return opcion;
 };
 
+function totalCarrito(){
+    carrito.forEach(libro => {
+        total += libro.precio;
+    })
+}
+
+
+
 function limpiarCarrito() {
+    total = 0
     return carrito = [];
 }
 
