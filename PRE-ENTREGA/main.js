@@ -123,11 +123,11 @@ function main() {
         opcion = mostrarProductos();
     };
 
-    alert("Muchas gracias por su interes en nuestros libros, a continuacion aprete f12 para ver sus productos seleccionados")
+    alert("Muchas gracias por su interes en nuestros libros, a continuacion aprete F12 para ver sus productos seleccionados")
     console.log("Estos son los productos en su carrito!")
-    console.log(carrito);
+    console.table(carrito);
     totalCarrito()
-    console.log(`La suma total de su carrito es ${parseInt(total)}`)
+    console.log(`La suma total de su carrito es ${total}`)
 };
 
 function agregarLibro(libro) {
