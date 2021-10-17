@@ -117,6 +117,7 @@ input:checked + .slider:before {
     font-size: 3rem;
   }
   .container .github {
+    margin-bottom: 15px;
     font-weight: 700;
     border: 2px solid black;
     padding: 0.6rem;
