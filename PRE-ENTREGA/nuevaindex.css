@@ -91,15 +91,18 @@ button {
     .container{
         display: grid;
         grid-template-columns: 1fr 1fr ;
-        background-color: red;
         height: 100vh;
     
     }
 
+    img {
+        margin-top: 15px;
+    }
 
     button {
         margin-bottom: 15px;
     }
+
 
 }
 
@@ -113,6 +116,9 @@ button {
     
     }
 
+    img {
+        margin-top: 15px;
+    }
 
     button {
         margin-bottom: 15px;
