@@ -11,11 +11,11 @@ class Libro {
 }
 
 let libroUno = new Libro("KING", "CARRIE", 1974, "DEBOLSILLO", 4, 899);
-let libroDos = new Libro("KING", "SALEMNS LOT", 1976, "DEBOLSILLO", 9, 999);
-let libroTres = new Libro("KING", "CUJO", 1988, "DEBOLSILLO", 8, 899);
+let libroDos = new Libro("KING", "CUJO", 1976, "DEBOLSILLO", 9, 999);
+let libroTres = new Libro("KING", "SALEM'S LOT", 1988, "DEBOLSILLO", 8, 899);
 let libroCuatro = new Libro("KING", "IT", 1986, "DEBOLSILLO", 10, 1199);
 let libroCinco = new Libro("KING", "CEMENTERIO DE ANIMALES", 1999, "SALAMANDRA", 5, 899);
-let libroSeis = new Libro("KING", "LA NIEBLA", 1974, "SALAMANDRA", 3, 999);
+let libroSeis = new Libro("KING", "THE STAND", 1974, "SALAMANDRA", 3, 999);
 let libroSiete = new Libro("KING", "EL RESPLANDOR", 1984, "DEBOLSILLO", 0, 999);
 let libroOcho = new Libro("KING", "MISERY", 1984, "DEBOLSILLO", 3, 999);
 
