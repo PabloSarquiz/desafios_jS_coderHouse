@@ -18,68 +18,112 @@ let libroCinco = new Libro("JK ROWLING", "HARRY POTTER Y LA PIEDRA FILOSOFAL", 1
 let libroSeis = new Libro("JK ROWLING", "HARRY POTTER Y LA CAMARA SECRETA", 1974, "SALAMANDRA", 3, 999);
 let libroSiete = new Libro("KING", "EL RESPLANDOR", 1984, "DEBOLSILLO", 0, 999);
 
-let coleccion = [libroUno, libroDos, libroTres, libroCuatro, libroCinco, libroSeis, libroSiete];
-
-
-console.table(coleccion);
 
 let biblioteca = [];
 
 biblioteca.push(libroUno, libroDos, libroTres, libroCuatro, libroCinco, libroSeis, libroSiete);
-
-console.table(biblioteca);
 
 let carrito = [];
 
 
 
 function main() {
+    alert("Bienvenido a nuestra tienda virtual! A continuacion sellecione el numero del libro que desea comprar")
     let opcion = mostrarProductos();
 
     while (opcion != 0) {
         switch (opcion) {
             case 1:
-                alert(`agregaste ${biblioteca[0].titulo} al carrito`)
-                agregarLibro(biblioteca[0]);
+                if (biblioteca[0].stock <= 0) {
+                    alert("Lo sentimos, ya no hay stock")
+                    mostrarProductos();
+                } else {
+                    alert(`agregaste ${biblioteca[0].titulo} al carrito`);
+                    biblioteca[0].stock--
+                    agregarLibro(biblioteca[0]);
+
+                }
                 break
 
             case 2:
-                alert(`agregaste ${biblioteca[1].titulo} al carrito`)
-                agregarLibro(biblioteca[1]);
+                if (biblioteca[1].stock <= 0) {
+                    alert("Lo sentimos, ya no hay stock")
+                    mostrarProductos();
+                } else {
+                    alert(`agregaste ${biblioteca[1].titulo} al carrito`);
+                    biblioteca[1].stock--
+                    agregarLibro(biblioteca[1]);
+
+                }
                 break
 
             case 3:
-                alert(`agregaste ${biblioteca[2].titulo} al carrito`)
-                agregarLibro(biblioteca[2]);
-                break
+                if (biblioteca[2].stock <= 0) {
+                    alert("Lo sentimos, ya no hay stock")
+                    mostrarProductos();
+                } else {
+                    alert(`agregaste ${biblioteca[2].titulo} al carrito`);
+                    biblioteca[2].stock--
+                    agregarLibro(biblioteca[2]);
 
+                }
+                break
             case 4:
-                alert(`agregaste ${biblioteca[3].titulo} al carrito`)
-                agregarLibro(biblioteca[3]);
+                if (biblioteca[3].stock <= 0) {
+                    alert("Lo sentimos, ya no hay stock")
+                    mostrarProductos();
+                } else {
+                    alert(`agregaste ${biblioteca[3].titulo} al carrito`);
+                    biblioteca[3].stock--
+                    agregarLibro(biblioteca[3]);
+
+                }
                 break
 
             case 5:
-                alert(`agregaste ${biblioteca[4].titulo} al carrito`)
-                agregarLibro(biblioteca[4]);
+                if (biblioteca[4].stock <= 0) {
+                    alert("Lo sentimos, ya no hay stock")
+                    mostrarProductos();
+                } else {
+                    alert(`agregaste ${biblioteca[4].titulo} al carrito`);
+                    biblioteca[4].stock--
+                    agregarLibro(biblioteca[4]);
+
+                }
                 break
 
             case 6:
-                alert(`agregaste ${biblioteca[5].titulo} al carrito`)
-                agregarLibro(biblioteca[5]);
-                break
+                if (biblioteca[5].stock <= 0) {
+                    alert("Lo sentimos, ya no hay stock")
+                    mostrarProductos();
+                } else {
+                    alert(`agregaste ${biblioteca[5].titulo} al carrito`);
+                    biblioteca[5].stock--
+                    agregarLibro(biblioteca[5]);
 
+                }
+                break
             case 7:
-                alert(`agregaste ${biblioteca[6].titulo} al carrito`)
-                agregarLibro(biblioteca[6]);
+                if (biblioteca[6].stock <= 0) {
+                    alert("Lo sentimos, ya no hay stock")
+                    mostrarProductos();
+                } else {
+                    alert(`agregaste ${biblioteca[6].titulo} al carrito`);
+                    biblioteca[6].stock--
+                    agregarLibro(biblioteca[6]);
+
+                }
                 break
 
-                default:
-                    alert("Ingresaste una opcion invalida");
+            default:
+                alert("Ingresaste una opcion invalida");
         };
 
         opcion = mostrarProductos();
     };
-    console.log("Estos son los productos en su carrito4")
+
+    alert("Muchas gracias por su interes en nuestros libros, a continuacion aprete f12 para ver sus productos seleccionados")
+    console.log("Estos son los productos en su carrito!")
     console.log(carrito);
 };
 
@@ -92,12 +136,14 @@ function mostrarProductos() {
     return opcion;
 };
 
-function limpiarCarrito(){
-   return carrito = [];
+function limpiarCarrito() {
+    return carrito = [];
 }
 
 
 main();
+
+
 
 
 
