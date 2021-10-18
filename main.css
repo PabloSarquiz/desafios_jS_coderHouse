@@ -11,28 +11,14 @@
   body {
         min-height: 100vh;
 
-       
   }
-
-  body .dark {
-    
-      background-color: black;
-      color: white;
-    }
-  
 
   .stripes {
     border:  1px, solid, black;
     height: 50px;
     background: repeating-linear-gradient(
-  45deg,
-  #eefa0d,
-  #faea07 10px,
-  #000107 10px,
-  #010208 20px
-  
-);
-  }
+  45deg, #eefa0d, #faea07 10px, #000107 10px, #010208 20px);
+}
 
   .darkMode{
     display: flex;
@@ -81,11 +67,11 @@
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: red;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px yellow;
 }
 
 input:checked + .slider:before {
@@ -122,18 +108,19 @@ input:checked + .slider:before {
     text-align: center;
     padding: 2rem;
   }
-  .container h1 {
-    font-size: 3rem;
-  }
+
+
   .container .github {
     margin-bottom: 15px;
     font-weight: 700;
     border: 2px solid black;
     padding: 0.6rem;
   }
+
   .container .github:hover {
     text-decoration: underline;
   }
+
   .container .container__desafios nav ul {
     width: 80%;
     margin: 0 auto;
@@ -153,4 +140,55 @@ input:checked + .slider:before {
     text-decoration: underline;
   }
 
-  
+
+/* -------------------- DARK MODE ----------------------------------*/
+
+
+  body.dark .stripes {
+    border:  1px, solid, black;
+    height: 50px;
+    background: repeating-linear-gradient(45deg,white, white 10px,black 10px,black 20px);
+    transition: .3s ease all;;
+  }
+
+  body.dark .container {
+    background: black;
+    transition: .3s ease all;;
+    
+  }
+  .container h1 {
+    font-size: 3rem;
+  }
+  body.dark h1 {
+    font-size: 3 rem;
+    color: whitesmoke;
+    transition: .3s ease all;;
+  }
+
+body.dark .container__desafios{
+  color: white;
+  transition: .3s ease all;;
+}
+
+body.dark li {
+  color: white;
+  transition: .3s ease all;;
+}
+
+body.dark nav ul li a {
+  color: white;
+  transition: .3s ease all;
+}
+
+body.dark h3 {
+  color: white;
+}
+
+body.dark .github {
+  margin-bottom: 15px;
+  font-weight: 700;
+  border: 2px solid white;
+  padding: 0.6rem;
+  color: white;
+  transition: .3s ease all;;
+}
