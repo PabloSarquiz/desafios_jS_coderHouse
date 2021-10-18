@@ -10,7 +10,16 @@
 
   body {
         min-height: 100vh;
+
+       
   }
+
+  body .dark {
+    
+      background-color: black;
+      color: white;
+    }
+  
 
   .stripes {
     border:  1px, solid, black;
@@ -143,3 +152,5 @@ input:checked + .slider:before {
   .container .container__desafios nav ul li a:hover {
     text-decoration: underline;
   }
+
+  
