@@ -136,7 +136,7 @@ function agregarLibro(libro) {
 }
 
 function mostrarProductos() {
-    let opcion = parseInt(prompt("Seleccione el libro, presiones 0 para salir\n\n 1-Carrie \n\n 2 Salem's lot \n\n 3-Cujo\n\n 4-IT \n\n 5-Harry potter I\n\n 6-Harry Potter II\n\n 7-El resplandor"));
+    let opcion = parseInt(prompt("Seleccione el libro, presiones 0 para salir\n\n 1-Carrie \n\n 2 Cujo \n\n 3-Salem's Lot\n\n 4-IT \n\n 5-Cementerio de Animales\n\n 6-The Stand\n\n 7-El resplandor \n\n 8-Missery"));
     return opcion;
 };
 
